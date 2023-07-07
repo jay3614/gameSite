@@ -5795,3 +5795,28 @@ a {
   top: 15px;
   left: 20px;
 }
+
+
+/**** [gameSite 프로젝트 추가 css]****/
+.footer_info{
+	width: 100%;
+}
+.footer_info p{
+	width: 100%;
+}
+
+.footer_info ul li:first-child{
+	padding-left: 0px;
+	background: none;
+}
+
+.footer_info ul li{
+	float: left;
+	padding: 0 13px;
+	font-size: 12px;
+	background: url('../img/icons/footer_line.png') no-repeat;
+}
+
+.footer_info ul li a{
+	color: #b2b2b2;
+}
