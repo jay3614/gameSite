@@ -23,6 +23,8 @@ public class EventEntity extends BaseEntity {
 	
 	private String title;
 	
+	private String eventRange;
+	
 	private String content;
 	
 	private String image;

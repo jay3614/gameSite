@@ -5797,6 +5797,53 @@ a {
 
 
 /**** [gameSite 프로젝트 추가 css]****/
+
+
+/* [notice 섹션 css] */
+.notice{
+	margin-left: 7%;
+	height: 250px;
+}
+
+.notice div{
+	margin-right: 5%;
+	width: 25%;
+	border: 1px solid;
+}
+
+div.notice1 a.title {
+	font-size: 25px;
+	color: black;
+}
+
+div.notice1 p.content {
+	font-size: 15px;
+	border-top: dotted 2px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+div.notice2 a.title {
+	font-size: 25px;
+	color: black;
+}
+
+div.notice2 p.content {
+	font-size: 15px;
+	border-top: dotted 2px;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+div.notice3 a.title {
+	color: black;
+	font-size: 20px;
+}
+
+
+
+
+/* [footer css] */
 .footer_info{
 	width: 100%;
 }

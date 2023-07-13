@@ -182,91 +182,31 @@
 	
 	
 	<!-- 본문 시작 -->
-	<section class="event-tab bg0 p-t-50 p-b-65">
+	<section class="event-tab bg0 p-t-50 p-b-20">
 		<div class="container">
 			<div>
 				<div>
 					<div>
-						<div>
-							<img class="event-img" src="img/main/banner/banner1.jpg"><!-- 디폴트로 첫번째 이벤트 이미지 출력 -->
+						<div class="imgDiv">
+							<img class="event-img" id="event-img" th:src="${eventList[0].image}">
 						</div>
 					
 						<div class="wrap-slick2">
 							<div class="slick2">
-								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15"
+									th:each="dto : ${eventList}">
 									<div class="block2">
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
 												<span
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" id="1"
-													onclick="openBanner()"><!-- id값은 타임리프로 지정 -->
-													Samsung Galaxy S23 Ultra 512GB Graphite (Korean Ver.)
-												</span>
-												<span class="stext-105 cl3"> ￦145,600
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-									<div class="block2">
-										<div class="block2-txt flex-w flex-t p-t-14">
-											<div class="block2-txt-child1 flex-col-l ">
-												<span
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" id="2"
+													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" th:id="${dto.id}"
 													onclick="openBanner()">
-													Samsung Galaxy S23 Ultra 512GB Graphite (Korean Ver.)
-												</span> <span class="stext-105 cl3"> ￦145,600
+													[[${dto.title}]]
 												</span>
 											</div>
 										</div>
 									</div>
 								</div>
-								
-								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-									<div class="block2">
-										<div class="block2-txt flex-w flex-t p-t-14">
-											<div class="block2-txt-child1 flex-col-l ">
-												<span
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-													Samsung Galaxy S23 Ultra 512GB Graphite (Korean Ver.)
-												</span> <span class="stext-105 cl3"> ￦145,600
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-									<div class="block2">
-										<div class="block2-txt flex-w flex-t p-t-14">
-											<div class="block2-txt-child1 flex-col-l ">
-												<span
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-													Samsung Galaxy S23 Ultra 512GB Graphite (Korean Ver.)
-												</span> <span class="stext-105 cl3"> ￦145,600
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-									<div class="block2">
-										<div class="block2-txt flex-w flex-t p-t-14">
-											<div class="block2-txt-child1 flex-col-l ">
-												<span
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-													Samsung Galaxy S23 Ultra 512GB Graphite (Korean Ver.)
-												</span> <span class="stext-105 cl3"> ￦145,600
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								
 							</div>
 						</div>
 					</div>
@@ -275,26 +215,36 @@
 		</div>
 	</section>
 	
-	<section>
-		<div>
-			<h1>업데이트 내용</h1>
-		</div>
-		<div>
-			<h1>공지사항1</h1>
-		</div>
-		<div>
-			<h1>공지사항 나머지 제목만</h1>
+	<section class="bg0 p-t-20 p-b-20">
+		<div class="row notice">
+			<div class="notice1">
+				<a class="title" href="#">업데이트 제목</a><!-- th:text="${updateList.title}" -->
+				<p class="content">업데이트 내용~~~~~~~~~~~</p><!-- th:text="${updateList.content}" -->
+			</div>
+			
+			<div class="notice2">
+				<a class="title" href="#">공지사항최신순 1aaaaaaaa</a><!-- th:text="${notice1.title}" -->
+				<p class="content">공지사항내용~~~~~~~~</p><!-- th:text="${notice1.content}" -->
+			</div>
+			
+			<div class="notice3">
+				<ul>
+					<li>
+						<a class="title" href="#">공지사항 최신순 2~5 제목aaaaaaaaaa만</a><!-- th:text="${noticeList.title}" -->
+					</li>
+				</ul>
+			</div>
 		</div>
 		
 	</section>
 	
-	<section>
+	<section class="bg0 p-t-20 p-b-20">
 		<div>
 			<h1>가이드 섹션</h1>
 		</div>
 	</section>
 
-	<section>
+	<section class="bg0 p-t-20 p-b-20">
 		<div>
 			<h1>미디어 섹션</h1>
 		</div>
@@ -372,24 +322,26 @@
 	<!--===============================================================================================-->
 	<script src="/js/main.js"></script>
 	<!--===============================================================================================-->
-	<script>
-/* 		function openBanner(){
-			var img = document.querySelector(".event-img");
-			img.src = "img/main/banner/banner2.jpg";
-			
-		} */
+	<script th:inline="javascript">
+	/*<![CDATA[*/
 		function openBanner() {
 			var spanAll = document.querySelectorAll(".slick2 span");
 			var span = event.target;
-			var img = document.querySelector(".event-img");
+			var id = event.target.id - 1;
+			var div = document.querySelector(".imgDiv");
 			
 			for (const spanElement of spanAll) {
 				spanElement.style.textDecoration = "none";
 			}
 			span.style.textDecoration = "underline";
-			img.src = document.querySelector("#img2");
+			
+			//div.innerHTML = '<img th:src=" + ${eventList[' + id + '].image}">';
+			
+			//var img = document.querySelector('.event-img');
+  			//img.setAttribute('th:src', '${eventList[2].image}');
+  			
 		}
-		
+	/*]]>*/
 	</script>
 	
 </body>
