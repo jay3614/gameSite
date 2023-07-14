@@ -25,6 +25,30 @@ public class NoticeServiceImpl implements NoticeService {
 	}
 
 	@Override
+	public List<NoticeDTO> updateList() {
+		
+		List<NoticeDTO> result = noticeRepository.getUpdateList().stream().map(notice -> entityToDto(notice)).collect(Collectors.toList());
+		
+		return result;
+	}	
+	
+	@Override
+	public List<NoticeDTO> listFirst() {
+		
+		List<NoticeDTO> result = noticeRepository.getListByFirst().stream().map(notice -> entityToDto(notice)).collect(Collectors.toList());
+		
+		return result;
+	}
+
+	@Override
+	public List<NoticeDTO> listAfterSec() {
+		
+		List<NoticeDTO> result = noticeRepository.getListAfterSec().stream().map(notice -> entityToDto(notice)).collect(Collectors.toList());
+		
+		return result;
+	}
+	
+	@Override
 	public NoticeDTO read(Long id) {
 		
 		
@@ -54,6 +78,7 @@ public class NoticeServiceImpl implements NoticeService {
 		
 		
 	}
+
 	
 	
 	

@@ -215,22 +215,25 @@
 		</div>
 	</section>
 	
-	<section class="bg0 p-t-20 p-b-20">
+	<section class="bg0 p-t-20 p-b-20 noticeSection">
 		<div class="row notice">
 			<div class="notice1">
-				<a class="title" href="#">업데이트 제목</a><!-- th:text="${updateList.title}" -->
-				<p class="content">업데이트 내용~~~~~~~~~~~</p><!-- th:text="${updateList.content}" -->
+				<p class="type">업데이트</p><br>
+				<a class="title" href="#">[[${updateList[0].title}]]</a>
+				<p class="content">[[${updateList[0].content}]]</p>
 			</div>
 			
 			<div class="notice2">
-				<a class="title" href="#">공지사항최신순 1aaaaaaaa</a><!-- th:text="${notice1.title}" -->
-				<p class="content">공지사항내용~~~~~~~~</p><!-- th:text="${notice1.content}" -->
+				<p class="type">[[${noticeFirst[0].types}]]</p><br>
+				<a class="title" href="#">[[${noticeFirst[0].title}]]</a>
+				<p class="content">[[${noticeFirst[0].content}]]</p>
 			</div>
 			
 			<div class="notice3">
 				<ul>
-					<li>
-						<a class="title" href="#">공지사항 최신순 2~5 제목aaaaaaaaaa만</a><!-- th:text="${noticeList.title}" -->
+					<li th:each="dto : ${noticeAfterSec}">
+						<span class="type">공지</span>
+						<a class="title" href="#">[[${dto.title}]]</a>
 					</li>
 				</ul>
 			</div>
@@ -238,7 +241,7 @@
 		
 	</section>
 	
-	<section class="bg0 p-t-20 p-b-20">
+	<section class="bg0 p-t-50 p-b-20">
 		<div>
 			<h1>가이드 섹션</h1>
 		</div>

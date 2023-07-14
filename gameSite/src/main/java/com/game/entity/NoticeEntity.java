@@ -26,5 +26,7 @@ public class NoticeEntity extends BaseEntity {
 	
 	private String content;
 	
-	private Long viewCount;
+	private long viewCount;
+	
+	private String types;
 }

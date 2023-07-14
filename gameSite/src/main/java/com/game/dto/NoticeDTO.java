@@ -25,7 +25,7 @@ public class NoticeDTO {
 	
 	private String content;
 	
-	private String image;
-	
 	private Long viewCount;
+	
+	private String types;
 }
