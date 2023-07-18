@@ -116,7 +116,7 @@
 							<li><a href="#">미디어</a>
 								<ul class="sub-menu">
 									<li><a href="#">영상</a></li>
-									<li><a href="#">스크린샷</a></li>
+									<li><a href="#">음악</a></li>
 								</ul>
 							</li>
 							
@@ -188,7 +188,7 @@
 				<div>
 					<div>
 						<div class="imgDiv">
-							<a href="#"><img class="event-img" id="event-img" th:src="${eventList[0].image}"></a>
+							<img class="event-img" id="event-img" th:src="${eventList[0].image}">
 						</div>
 					
 						<div class="wrap-slick2">
@@ -198,10 +198,9 @@
 									<div class="block2">
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
-												<input class="eventImage" type="hidden" th:value="${dto.image}">
 												<span
-													class="event-title stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" th:id="${dto.id}"
-													 onclick="changeImg()">
+													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" th:id="${dto.id}"
+													onclick="openBanner()">
 													[[${dto.title}]]
 												</span>
 											</div>
@@ -242,60 +241,15 @@
 		
 	</section>
 	
-	<section class="bg8 p-t-30 p-b-20">
-		<div class="row guideSection">
-			<div class="guide1">
-				<p>자바플스토리<br>게임정보</p>
-				<a href="#"><img src="img/test/btn_off.png" alt="IMG-LOGO"></a>
-			</div>
-			
-			<div class="guide2">
-				<a href="#"><img src="img/test/banner1.png" alt="IMG-LOGO"></a>
-			</div>
-			
-			<div class="guide3">
-				<a href="#"><img src="img/test/banner2.png" alt="IMG-LOGO"></a>
-			</div>
-			
-			<div class="guide4">
-				<a href="#"><img src="img/test/banner3.png" alt="IMG-LOGO"></a>
-			</div>
+	<section class="bg0 p-t-50 p-b-20">
+		<div>
+			<h1>가이드 섹션</h1>
 		</div>
 	</section>
 
-	<section class="bg2 p-t-20 p-b-20">
-		<div class="mediaSection container">
-			<h2>영상<img src="img/icons/icon-plus.png" alt="plus button"></h2>
-			
-			<!-- 4개 반복되도록 타임리 적용해야함 -->
-			<div class="bg0 media-video">
-				<div class="">
-					<img src="img/test/banner1.png" alt="">
-				</div>
-
-				<div class="p-t-14">
-					<div class="flex-col-l">
-						<span>영상의 제목 표시</span>
-						<span class="stext-105 cl3"> 작성자 아이디</span>
-					</div>
-				</div>
-			</div>
-			<!--  -->
-			
-			<h2>스크린샷<img src="img/icons/icon-plus.png" alt="plus button"></h2>
-			
-			<!-- 4개 반복되도록 타임리 적용해야함 -->
-			<div class="bg0 media-screenshot">
-				<a href="#">
-					<img class="p-t-14" src="img/test/banner1.png" alt="">
-					<div>
-						<div class="flex-col-l">
-							<span>영상의 제목 표시</span>
-							<span class="stext-105 cl3"> 작성자 아이디</span>
-						</div>
-					</div>
-				</a>
-			</div>
+	<section class="bg0 p-t-20 p-b-20">
+		<div>
+			<h1>미디어 섹션</h1>
 		</div>
 	</section>
 	
@@ -373,18 +327,21 @@
 	<!--===============================================================================================-->
 	<script th:inline="javascript">
 	/*<![CDATA[*/
-		function changeImg() {
+		function openBanner() {
 			var spanAll = document.querySelectorAll(".slick2 span");
 			var span = event.target;
-			var img = document.querySelector('.event-img');
-			var changeImg = $(event.currentTarget).closest(".block2").find(".eventImage").val();
+			var id = event.target.id - 1;
+			var div = document.querySelector(".imgDiv");
 			
 			for (const spanElement of spanAll) {
 				spanElement.style.textDecoration = "none";
 			}
 			span.style.textDecoration = "underline";
 			
-  			img.setAttribute('src', changeImg);
+			//div.innerHTML = '<img th:src=" + ${eventList[' + id + '].image}">';
+			
+			//var img = document.querySelector('.event-img');
+  			//img.setAttribute('th:src', '${eventList[2].image}');
   			
 		}
 	/*]]>*/

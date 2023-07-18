@@ -309,10 +309,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.header-v4 .wrap-menu-desktop {
-  background-color: #fff;
-}
-
 
 /*---------------------------------------------*/
 .limiter-menu-desktop {
@@ -794,7 +790,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .fix-menu-desktop .wrap-menu-desktop {
   height: 70px;
-  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0px 3px 0px rgba(0, 0, 0, 0.2);
@@ -1159,86 +1154,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   right: 1;
   top: -10px;
 }
-
-.hot__deal__sticker span {
-  display: block;
-  font-size: 15px;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.hot__deal__sticker h5 {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.hot__deal__sticker h6 {
-  color: #d6d1d1;
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 4px;
-}
-
-.categories__deal__countdown span {
-  color: #e53637;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.categories__deal__countdown h2 {
-  color: #111111;
-  font-weight: 700;
-  line-height: 46px;
-  margin-bottom: 25px;
-  font-family: Poppins-Regular;
-  letter-spacing: 1px;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer {
-  margin-bottom: 20px;
-  overflow: hidden;
-  margin-left: -30px;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item {
-  width: 25%;
-  float: left;
-  margin-bottom: 25px;
-  text-align: center;
-  position: relative;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item:after {
-  position: absolute;
-  right: 0;
-  top: 7px;
-  content: ":";
-  font-size: 24px;
-  font-weight: 700;
-  color: #3d3d3d;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item:last-child:after {
-  display: none;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item span {
-  color: #111111;
-  font-weight: 700;
-  display: block;
-  font-size: 36px;
-}
-
-.categories__deal__countdown .categories__deal__countdown__timer .cd-item p {
-  margin-bottom: 0;
-}
-
-
 
 
 /* Medium Device = 1200px */
@@ -5733,14 +5648,17 @@ a {
 
 
 /* [notice 섹션 css] */
-.notice{
-	margin-left: 100px;
+.noticeSection {
+	margin-bottom: 30px;
+}
+
+.notice {
+	margin-left: 12%;
 	height: 250px;
 	margin-bottom: 30px;
 }
 
-/*25% or 400px*/
-.notice div{
+.notice div {
 	margin-right: 80px;
 	width: 25%;
 	min-width: 200px;
@@ -5807,6 +5725,71 @@ div.notice3 a.title {
 .notice3 ul li:last-child {
     border-bottom: none;
 }
+
+/** 가이드 섹션 **/
+.guideSection {
+	margin-left: 11%;
+	width: 1500px;
+	display: flex;
+	justify-content: center;
+}
+
+div.guide1 {
+	padding-left: 20px;
+	margin-right: 50px;
+	width: 300px;
+	font-size: 28px;
+	color: #333333;
+}
+
+div.guide1 p {
+	margin-bottom: 15px;
+}
+
+div.guide2 {
+	margin-right: 50px;
+	width: 300px;
+}
+
+div.guide3 {
+	margin-right: 50px;
+	width: 300px;
+}
+
+div.guide4 {
+	width: 300px;
+}
+
+
+/** 미디어 섹션 **/
+.mediaSection {
+	margin-left: 10%;
+	border: solid 1px;
+}
+
+.mediaSection img {
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+}
+
+.mediaSection h2, img{
+	display: flex;
+	justify-content: space-between;
+}
+
+.mediaSection div.media-video {
+	width: 310px;
+	height: 295px;
+	margin-bottom: 30px;
+}
+
+.mediaSection div.media-screenshot {
+	width: 310px;
+	height: 295px;
+}
+
+
 
 
 /* [footer css] */
