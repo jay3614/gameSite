@@ -1,10 +1,12 @@
 package com.game.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,10 +29,11 @@ public class VideoEntity extends BaseEntity {
 	
 	private String content;
 	
-	//@JoinColumn(name = "writer")
-	//private MemberEntity member;	// member엔티티를 만들어서 닉네임을 fk값으로 가져오기
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "writer", referencedColumnName = "nickname")
+	private MemberEntity writer;
 	
-	private String youtubeLink;
+	private String youtubeLink;	// 링크를 삽입하면 자동으로 가장 마지막에 있는 / 의 뒷부분만 잘라서 db에 저장시키기
 	
 	private int favorate;
 	

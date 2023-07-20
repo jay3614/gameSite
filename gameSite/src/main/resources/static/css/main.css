@@ -142,7 +142,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*------------------------------------------------------------------
 [ Bootstrap ]*/
 .container {
-  max-width: 1380px;
+  max-width: 1430px;
 }
 
 @media (max-width: 1600px) {
@@ -5762,30 +5762,32 @@ div.guide4 {
 
 
 /** 미디어 섹션 **/
-.mediaSection {
-	margin-left: 10%;
-	border: solid 1px;
+.mediaSection a {
+	color: black;
 }
 
-.mediaSection img {
+.mediaSection img.icon {
 	width: 35px;
 	height: 35px;
-	vertical-align: middle;
 }
 
 .mediaSection h2, img{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
 .mediaSection div.media-video {
-	width: 310px;
 	height: 295px;
 	margin-bottom: 30px;
 }
 
+.mediaSection div.screenshot {
+	display: inline-block;
+	margin-right: 15px;
+}
+
 .mediaSection div.media-screenshot {
-	width: 310px;
 	height: 295px;
 }
 
