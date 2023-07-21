@@ -216,6 +216,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .container-menu-desktop {
   height: auto;
   width: 100%;
+  min-width: 1500px;
   position: relative;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -239,7 +240,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*==================================================================
 [ Top bar ]*/
 .top-bar {
-  height: 40px;
+  height: 50px;
 }
 
 /*---------------------------------------------*/
@@ -288,6 +289,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   z-index: 1100;
   background-color: #222;
   width: 100%;
+  min-width: 1500px;
   height: 84px;
   top: 40px;
   left: 0px;
@@ -888,19 +890,6 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 /*---------------------------------------------*/
-@media (max-width: 991px) {
-  .wrap-header-mobile {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .container-menu-desktop {
-    display: none;
-  }
-}
 
 /*==================================================================
 [ Menu mobile ]*/
@@ -1529,7 +1518,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-cart-content {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   overflow: auto;
   align-content: space-between;
 }
@@ -5645,16 +5634,27 @@ a {
 
 
 /**** [gameSite 프로젝트 추가 css]****/
+/* [헤더 섹션 css] */
+img.top-menu {
+	width: 70px;;
+	height: 30px;
+}
+
+
+/* [event 섹션 css] */
+.eventSection {
+	min-width: 1500px;
+}
 
 
 /* [notice 섹션 css] */
 .noticeSection {
 	margin-bottom: 30px;
+	min-width: 1500px;
 }
 
 .notice {
 	margin-left: 12%;
-	height: 250px;
 	margin-bottom: 30px;
 }
 
@@ -5726,16 +5726,18 @@ div.notice3 a.title {
     border-bottom: none;
 }
 
+
 /** 가이드 섹션 **/
+.guide {
+	min-width: 1500px;
+}
+
 .guideSection {
-	margin-left: 11%;
-	width: 1500px;
 	display: flex;
 	justify-content: center;
 }
 
 div.guide1 {
-	padding-left: 20px;
 	margin-right: 50px;
 	width: 300px;
 	font-size: 28px;
@@ -5762,6 +5764,13 @@ div.guide4 {
 
 
 /** 미디어 섹션 **/
+.media {
+	padding-left: 50px;
+	min-width: 1500px;
+	display: flex;
+	justify-content: center;
+}
+
 .mediaSection a {
 	color: black;
 }
@@ -5790,8 +5799,6 @@ div.guide4 {
 .mediaSection div.media-screenshot {
 	height: 295px;
 }
-
-
 
 
 /* [footer css] */
