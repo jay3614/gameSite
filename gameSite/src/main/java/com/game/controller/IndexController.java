@@ -38,8 +38,20 @@ public class IndexController {
 		model.addAttribute("noticeAfterSec", noticeAfterSec);
 		model.addAttribute("videoList", videoList);
 		
+	}
+	
+	@GetMapping("/login")
+	public void login(){
+		
+		
 		
 	}
 	
+	@GetMapping("/register")
+	public void register(){
+		
+		
+		
+	}
 	
 }
